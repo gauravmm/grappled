@@ -4,7 +4,7 @@ from subprocess import Popen, PIPE
 
 ALL_PLUGINS = {}
 
-def PluginException(Exception):
+class PluginException(Exception):
     def __init__(self, message, output=None):
         Exception.__init__(self)
         self.message = message
