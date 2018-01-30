@@ -148,7 +148,7 @@ def run(args):
                     rv["do"].append({"plugin_name": act_name, "output": dostr})
 
                 except Exception as e:
-                    rv["error"] = {"plugin_name": act_name, "message": str(e)}
+                    rv["error"] = {"plugin_name": act_name, "message": str(e.message)}
                     if hasattr(e, "output"):
                         rv["error"]["output"] = e.output
                     break
