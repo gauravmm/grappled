@@ -1,0 +1,17 @@
+endpoint: /test
+help: This is a test endpoint.
+ip-whitelist:
+  - 192.168.1.0/24
+ip-whitelist-github: yes
+do-default:
+  as: testuser
+  cwd: /home/testuser/Desktop/testdir/
+do:
+  - filter:
+      branch: master
+  - run:
+      command: git pull origin master
+  - run:
+      command: jekyll build -q
+  - run:
+      command: whoami
