@@ -49,7 +49,7 @@ class GrappledFlask(flask.Flask):
         return response
 
 # API Exceptions:
-class GrappledAPIException(BaseException):
+class GrappledAPIException(Exception):
     def __init__(self, message, status_code=400):
         Exception.__init__(self)
         self.message = message
@@ -149,7 +149,6 @@ def run(args):
 
                 except Exception as e:
                     rv["error"] = {"plugin_name": act_name, "message": str(e)}
-                    logger.warn(e)
                     if hasattr(e, "output"):
                         rv["error"]["output"] = e.output
                     break
