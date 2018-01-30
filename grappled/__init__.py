@@ -3,6 +3,6 @@
 import logging
 
 PROJECT_NAME = "Grappled"
-PROJECT_VERSION = (0, 1, 0)
+PROJECT_VERSION = (0, 1, 1)
 
 SERVER_STRING = "{}/{}".format(PROJECT_NAME, ".".join(str(d) for d in PROJECT_VERSION))

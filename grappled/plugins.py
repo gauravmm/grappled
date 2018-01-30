@@ -20,6 +20,9 @@ def plugin(name):
 
 @plugin("run")
 def handle_run(conf, args):
+    if "_" in conf:
+        conf["command"] = conf["_"]
+
     if "command" not in conf:
         raise PluginException("Missing command in run instruction.")
 

@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='grappled',
-      version='0.1.0',
+      version='0.1.1',
       description='Grapple GitHub Webhook Listener',
       long_description='Listens to webhooks sent by GitHub and runs custom actions. Supports multiple endpoints for different projects, IP filtering, etc.',
       classifiers=[
