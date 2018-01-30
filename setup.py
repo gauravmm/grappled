@@ -20,5 +20,6 @@ setup(name='grappled',
           'ipaddress',
           'requests',
           'expiringdict',
+          'pyyaml',
       ],
       include_package_data=True)
