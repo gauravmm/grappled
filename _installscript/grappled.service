@@ -1,0 +1,12 @@
+[Unit]
+Description=Grapple GitHub Webhook Listener
+After=network.target
+
+[Service]
+User=grappled
+Group=grappled
+ExecStart=/usr/bin/python3 -m grappled /etc/grappled.d/
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
