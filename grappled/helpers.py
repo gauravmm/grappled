@@ -76,7 +76,7 @@ def normalizeEndpointName(n):
 
 # Parse config and return a dictionary of handlers.
 def parseConfig(d):
-    d = d.resolve(True)
+    d = d.resolve()
     logger.info("Reading config files from {}".format(d))
     conf = {}
     github_ips = []
