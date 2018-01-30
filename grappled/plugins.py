@@ -6,7 +6,8 @@ ALL_PLUGINS = {}
 
 def PluginException(Exception):
     def __init__(self, message, output=None):
-        Exception.__init__(message)
+        Exception.__init__(self)
+        self.message = message
         self.output = output
 
 def plugin(name):
